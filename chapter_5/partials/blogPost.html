@@ -1,0 +1,26 @@
+<header class="navbar navbar-static-top">
+  <div ng-include src="'partials/menu.html'"></div>
+</header>
+
+<div id="container" class="container">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{blogEntry.blogText}}
+    </div>
+    <div class="panel-footer">
+      Posted : {{blogEntry.date | date : 'MM/dd/yyyy @ h:mma'}}
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Comments
+    </div>
+    <div class="panel-body">
+      <div ng-repeat="comment in blogEntry.comments">
+        <p><strong>{{comment.how}}</strong> says: {{comment.commentText}}</p>
+      </div>
+    </div>
+  </div>
+</div>

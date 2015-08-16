@@ -1,0 +1,23 @@
+<header class="navbar navbar-static-top">
+  <div ng-include src="'partials/menu.html'"></div>
+</header>
+
+<div id="container" class="container">
+
+  <div ng-repeat="blogPost in blogList">
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        {{blogPost.introText}}
+      </div>
+      <div class="panel-footer">
+        Posted : {{blogPost.date | date : 'MM/dd/yyyy @ h:mma'}}
+         >
+        <a href="#!blogPost/{{blogPost._id}}">Read more</a>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

@@ -12,7 +12,8 @@ helloWorldControllers.controller('ShowCtrl', ['$scope', function ShowCtrl($scope
 
 
 
-helloWorldControllers.controller('CustomerCtrl', ['$scope', function CustomerCtrl($scope){
+helloWorldControllers.controller('CustomerCtrl', ['$scope',
+function CustomerCtrl($scope){
   $scope.customerName = "Bob's Burger";
   $scope.customerNumber = "44522";
 
